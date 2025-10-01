@@ -11,4 +11,23 @@ Header: <span [class.minha-cor]="aplicarClasse">{{tituloHeader}}</span>
 <button (click)="atualizarTitulo()">Atualizar</button>
 
 
+@if (tipoUsuario === 'feliz'){
+    <p>😜</p>
+} @else {
+    <p>🙋🏻‍♂️</p>
+}
+
+@switch (tipoUsuario){
+    @case ('feliz'){
+        <p>😜</p>
+    }
+    @default {
+        <p>🙋🏻‍♂️</p>
+    }
+}
+
+
+@for(usuario of usuarios; track usuario.id){
+    Nome: <p [style.color]="usuario.id === 1 ? 'red' : '' ">{{usuario.nome}}</p>
+}
 

@@ -12,6 +12,18 @@ export class HeaderComponent {
   valorInput = 'Valor Inicial'
   aplicarClasse = false;
   estiloCor = 'orange';
+  tipoUsuario: 'feliz' | 'legal' = 'feliz';
+
+  usuarios =  [
+    {
+      id: 0,
+      nome: 'Welber'
+    },
+    {
+      id: 1,
+      nome: 'Henrique'
+    }
+  ]
 
   retornarTitulo(){
     return 'Welber';
