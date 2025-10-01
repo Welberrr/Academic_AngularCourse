@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -24,6 +24,17 @@ export class HeaderComponent {
       nome: 'Henrique'
     }
   ]
+
+  @Input() titulo: string = '';
+
+  @Output() textoEmit = new EventEmitter<string>();
+
+
+
+
+  emitirValor(){
+    this.textoEmit.emit('Texto do filho');
+  }
 
   retornarTitulo(){
     return 'Welber';
