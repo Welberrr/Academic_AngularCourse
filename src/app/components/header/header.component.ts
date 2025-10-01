@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  tituloHeader = 'Youtube';
+  tituloHeader = 'Youtube Welber Henrique';
 
   retornarTitulo(){
     return 'Welber';
+  }
+
+  atualizarTitulo(){
+    this.tituloHeader = 'Welber atualizado';
   }
 }
