@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-content',
@@ -9,5 +10,5 @@ import { HeaderComponent } from '../header/header.component';
   styleUrl: './content.component.css'
 })
 export class ContentComponent {
-  
+  readonly _storageService = inject(StorageService);
 }

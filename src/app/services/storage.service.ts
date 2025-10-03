@@ -5,4 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class StorageService {
   usuarioAtual = 'Welber';
+
+
+  atualizarUsuario(){
+    this.usuarioAtual = 'Henrique';
+  }
 }
