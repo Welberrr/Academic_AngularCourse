@@ -1,3 +1,5 @@
 <p>content works!</p>
 
-<p>content: {{_storageService.usuarioAtual}}</p>
+@for(post of postsList; track by post.id){
+    <p>Titulo: {{post.title}}</p>
+}
