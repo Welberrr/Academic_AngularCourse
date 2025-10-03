@@ -10,9 +10,5 @@ import { ContentComponent } from './components/content/content.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  appTitulo = 'Titulo do header';
-
-  receberValor(texto: string){
-    console.log('Valor recebido: ' + texto);
-  }
+  
 }

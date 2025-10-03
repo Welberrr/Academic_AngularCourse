@@ -9,5 +9,5 @@ import { HeaderComponent } from '../header/header.component';
   styleUrl: './content.component.css'
 })
 export class ContentComponent {
-  titulo = 'Titulo do header';
+  
 }
