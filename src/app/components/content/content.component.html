@@ -1,5 +1,5 @@
-<p>content works!</p>
+<form #usuarioForm="ngForm" (ngSubmit)="enviarFormulario(usuarioForm)">
+    Nome: <input name="Nome Usuario" [(ngModel)]="nomeUsuario" required>
 
-@for(post of postsList; track by post.id){
-    <p>Titulo: {{post.title}}</p>
-}
+    <button [disabled]="!usuarioForm.form.valid" type="submit">Enviar</button>
+</form>
