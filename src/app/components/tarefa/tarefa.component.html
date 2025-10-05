@@ -1,0 +1,15 @@
+<p>Tarefa works!</p>
+
+<h1>Minha Lista de Tarefas</h1>
+
+<div>
+  <input #novaTarefaInput type="text" placeholder="Digite uma nova tarefa...">
+  <button (click)="adicionar(novaTarefaInput.value); novaTarefaInput.value=''">Adicionar</button>
+</div>
+
+<ul>
+  <li *ngFor="let tarefa of listaDeTarefas">
+    <span>{{ tarefa.titulo }} (ID: {{ tarefa.id }})</span>
+    <button (click)="remover(tarefa.id)">Remover</button>
+  </li>
+</ul>
