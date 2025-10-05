@@ -1,0 +1,19 @@
+<p>Tarefa works!</p>
+
+<ul>
+  <li *ngFor="let item of tarefas" [id]="item.id">
+    {{ item.id }}
+  </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of tarefas">
+        {{ item.titulo }}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of tarefas">
+        {{ item.concluida }}
+    </li>
+</ul>
