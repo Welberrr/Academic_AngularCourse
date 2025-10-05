@@ -1,16 +1,18 @@
 import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-content',
-  imports: [FormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './content.component.html',
   styleUrl: './content.component.css'
 })
 export class ContentComponent {
-  nomeUsuario = '';
+ usuarioForm = new FormGroup({
+  name: new FormControl('Welber', [Validators.required]),
+ });
 
-  enviarFormulario(userForm: any){
-    console.log('Finalizado: ', this.nomeUsuario, userForm);
-  }
+ enviarFormulario() {
+    console.log('Formulario', this.usuarioForm);
+ }
 }
