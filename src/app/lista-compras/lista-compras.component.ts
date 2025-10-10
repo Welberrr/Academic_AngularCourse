@@ -21,7 +21,5 @@ export class ListaComprasComponent {
     this.lista.push(itemLista);
 
     this.item = '';
-
-    console.table(this.lista);
   }
 }
